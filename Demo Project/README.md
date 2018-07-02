@@ -1,7 +1,8 @@
-# ComputerVisionDemo
+# Demo for Computer Vision
 An demo app that uses openCV to detect faces and eyes.
 
 ## Usage Guide
+Will work with both python 2 and python3. <br>
 Install python package.</br>
 ```pip install opencv-python```</br></br>
 Clone directory.</br>
@@ -10,5 +11,3 @@ Change directory.</br>
 ```cd Demo Project```</br></br>
 Run python file.</br>
 ```python faceDetection.py```</br></br>
-
-![alt text](https://github.com/tomonarifeehan/ComputerVisionDemo/blob/master/faces.png "Computer Vision App")
