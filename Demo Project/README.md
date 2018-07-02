@@ -2,7 +2,7 @@
 An demo app that uses openCV to detect faces and eyes.
 
 ## Usage Guide
-Will work with both python 2 and python3. <br>
+Will work with both python 2 and python3. </br>
 Install python package.</br>
 ```pip install opencv-python```</br></br>
 Clone directory.</br>
