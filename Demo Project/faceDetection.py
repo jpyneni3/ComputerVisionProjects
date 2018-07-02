@@ -16,17 +16,18 @@ while True:
         roi_gray = gray[y: y+h, x:x+w]
         roi_color = img[y: y+h, x:x+w]
         eyes = eye_cascade.detectMultiScale(roi_gray)
-        setX = x
-        setY = y
-        for (ex,ey,ew,eh) in eyes:
-            cv2.circle(roi_color, (ex+math.floor(.5*ex), ey+math.floor(.5*ey)), 4, (0,255,0), 2)
+        # setX = x
+        # setY = y
+        # for (ex,ey,ew,eh) in eyes:
+        #     cv2.circle(roi_color, (ex+math.floor(.5*ex), ey+math.floor(.5*ey)), 4, (0,255,0), 2)
+        for (ex, ey, ew, eh) in eyes:
+            cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
 
-    mirror_img = cv2.flip( img, 1 )
-    cv2.putText(mirror_img,"You ugly!!!", (setX,setY), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
-    cv2.imshow("mirror image", mirror_img)
-    k = cv2.waitKey(3) & 0xff
-    if k == 27:
-        break
+        mirror_img = cv2.flip(img, 1 )
+        cv2.imshow("mirror image", mirror_img)
+        k = cv2.waitKey(3) & 0xff
+        if k == 27:
+            break
 
 
 cap.release()
